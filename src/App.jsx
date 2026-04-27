@@ -83,14 +83,15 @@ export default function App() {
           type="button"
           onClick={() => setIsSidebarOpen((open) => !open)}
           aria-label="Toggle table of contents"
+          className="toc-hamburger"
           style={{
             position: 'fixed',
-            top: 10,
-            left: 10,
+            top: 12,
+            left: 12,
             zIndex: 21,
-            border: '1px solid #334155',
-            background: '#0f172a',
-            color: '#e2e8f0',
+            border: '1px solid #475569',
+            background: '#ffffff',
+            color: '#0f172a',
             borderRadius: 8,
             padding: '8px 11px',
             fontSize: 18,
@@ -110,15 +111,16 @@ export default function App() {
         loading={<p style={{ color: '#f8fafc', padding: 12 }}>Loading PDF...</p>}
       >
         <aside
+          className="toc-sidebar"
           style={{
             width: 320,
             maxWidth: '82vw',
-            borderRight: '1px solid #334155',
+            borderRight: '1px solid #dbe4ef',
             padding: 12,
             boxSizing: 'border-box',
             overflowY: 'auto',
-            color: '#f8fafc',
-            background: '#0f172a',
+            color: '#0f172a',
+            background: '#f8fafc',
             position: isMobile ? 'fixed' : 'relative',
             top: 0,
             left: 0,
@@ -126,9 +128,12 @@ export default function App() {
             zIndex: 20,
             transform: isMobile && !isSidebarOpen ? 'translateX(-100%)' : 'translateX(0)',
             transition: 'transform 0.2s ease',
+            paddingTop: isMobile ? 58 : 12,
           }}
         >
-          <div style={{ fontWeight: 600, marginBottom: 8 }}>Table of Contents</div>
+          <div className="toc-title" style={{ fontWeight: 700, marginBottom: 10 }}>
+            Table of Contents
+          </div>
           <Outline
             onItemClick={({ pageNumber }) => {
               if (pageNumber) goToPage(pageNumber)

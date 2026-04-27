@@ -22,3 +22,48 @@ body,
   min-height: 0;
   overflow-y: auto;
 }
+
+.toc-hamburger {
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+}
+
+.toc-sidebar {
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.toc-title {
+  color: #0f172a;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+.toc-sidebar .react-pdf__Outline ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.toc-sidebar .react-pdf__Outline li {
+  margin: 2px 0;
+}
+
+.toc-sidebar .react-pdf__Outline li > a {
+  display: block;
+  color: #334155;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.toc-sidebar .react-pdf__Outline li > a:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.toc-sidebar .react-pdf__Outline li > a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+  background: #dbeafe;
+}
