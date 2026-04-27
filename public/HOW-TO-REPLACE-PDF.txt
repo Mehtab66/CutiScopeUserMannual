@@ -1,0 +1,6 @@
+Replace this file with your latest manual (keep the filename):
+  cutiscope-user-manual.pdf
+
+Or set environment variable VITE_MANUAL_PDF_URL to a full https URL of the PDF when building or in .env
+
+The app appends #navpanes=0&pagemode=useNone to hide the outline / side pane in Chromium-based browsers (Chrome, Edge). Safari/Firefox may still show their own PDF UI.
