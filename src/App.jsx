@@ -11,7 +11,7 @@ function pdfEmbedSrc(url) {
 export default function App() {
   const envUrl = import.meta.env.VITE_MANUAL_PDF_URL
   const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '')
-  const defaultPath = '/cutiscope-user-manual.pdf'
+  const defaultPath = '/UserManual.pdf'
   const raw = envUrl || (base ? `${base}${defaultPath}` : defaultPath)
   const src = pdfEmbedSrc(raw)
 
