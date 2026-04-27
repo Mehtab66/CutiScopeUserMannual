@@ -161,7 +161,7 @@ export default function App() {
                   pageNumber={index + 1}
                   width={pageWidth}
                   renderTextLayer={false}
-                  renderAnnotationLayer={false}
+                  renderAnnotationLayer
                 />
               </div>
             ))
