@@ -104,6 +104,7 @@ export default function App() {
 
       <Document
         file={file}
+        className="pdf-shell"
         onLoadSuccess={onLoadSuccess}
         onLoadError={onLoadError}
         loading={<p style={{ color: '#f8fafc', padding: 12 }}>Loading PDF...</p>}
@@ -135,7 +136,7 @@ export default function App() {
           />
         </aside>
 
-        <main style={{ flex: 1, overflowY: 'auto', padding: 12, boxSizing: 'border-box' }}>
+        <main className="pdf-main" style={{ padding: 12, boxSizing: 'border-box' }}>
           {error ? (
             <div style={{ color: '#fecaca' }}>
               {error}
